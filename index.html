@@ -2,24 +2,55 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketHack</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <h1>Explore the world effortlessly by train!</h1>
-    <h2>Compare, book and enjoy cheap prices for train tickets: your journey start on TicketHack</h2>
-    <div class="departureArrivalDateSearchContainer">
-      <input id="departureInput" type="text" placeholder="Departure"/>
-      <input id="arrivalInput" type="text" placeholder="Arrival"/>
-      <input id="dateInput" type="date"/>
-      <button id="searchTicket">Search</button>
-    </div>
-    <div class="searchResult">
-      <img src="./images/train.png"/>
-      <p>It's time to book your future trip</p>
-      <img src="./images/notfound.png"/>
-      <p>No trip found</p>
-    </div>
+      <div id="header">
+
+        <div id="leftButton">
+          <p id="homeButton">Tickethack</p>
+        </div>
+        
+        <div id="rightButtons">
+          <p id="cartButton">Cart</p>
+          <p id="bookingsButton">Bookings</p>
+        </div>
+
+      </div>
+    
+
+      <div id="container">
+
+        <div id="slogans">
+          <h1 id="sloganText1">Explore the world effortlessly by train!</h1>
+          <h2 id="sloganText2">Compare, book and enjoy cheap prices for train tickets: your journey start on TicketHack</h2>
+        </div>
+
+        <div id="divSupp">
+          <div id="departureArrivalDateSearchContainer">
+            <input id="departureInput" type="text" placeholder="Departure"/>
+            <input id="arrivalInput" type="text" placeholder="Arrival"/>
+            <input id="dateInput" type="date"/>
+            <button id="searchTicket">Search</button>
+          </div>
+
+          <div id="searchResult">
+            <div id="premierMessage">
+              <img src="./images/train.png" id="trainIcon"/>
+              <p>It's time to book your future trip</p>
+            </div>
+            <div id="deuxiemeMessage">
+              <img src="./images/notfound.png" id="notFoundIcon"/>
+              <p>No trip found</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
   <script src="script.js"></script>
 </body>
