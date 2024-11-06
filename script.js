@@ -10,3 +10,4 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
     window.location.assign('bookings.html');
 })
 
+
