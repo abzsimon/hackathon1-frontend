@@ -34,6 +34,11 @@ document.querySelector("#searchButton").addEventListener("click", function () {
 
     const dateInput = document.querySelector("#dateInput");
     const dateValue = dateInput.value;
+
+    const premierMessage = document.querySelector("#premierMessage");
+    const deuxiemeMessage = document.querySelector("#deuxiemeMessage");
+    const troisiemeMessage= document.querySelector("#troisiemeMessage");
+
     fetch("https://hackathon1-backend.vercel.app/trips", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
@@ -44,10 +49,23 @@ document.querySelector("#searchButton").addEventListener("click", function () {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        if(data) {
+        // if(data && data.length > 0) {
+            premierMessage.style.display = "none"
+            troisiemeMessage.style.display ="flex";
+            // premierMessage.style.display = "none";
+            // deuxiemeMessage.style.display = "flex";
+        } else if(!data) {
+            premierMessage.style.display = "none";
+            deuxiemeMessage.style.display = "flex";
+            // premierMessage.style.display = "none"
+            // troisiemeMessage.style.display ="flex";
+            // troisiemeMessage = res.json({data})
+        }
     })
 })
 
+// troisiemeMessage.innerHTML += ""
 
 
     // fetch method post
