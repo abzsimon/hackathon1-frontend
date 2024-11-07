@@ -73,7 +73,8 @@
     background-color: white;
     width: 300px;
     height: 450px;
-    margin-left: 550px;
+    margin-left: 450px;
+    /* margin-left: 550px; */
     padding: 20px;
     border-radius: 15px;
     
@@ -130,11 +131,31 @@
     background-color: white;
     width: 300px;
     height: 450px;
-    margin-right: 550px;
+    margin-right: 450px;
     padding: 20px;
     border-radius: 15px;
     font-size: 20px;
     font-family: "Gill Sans", sans-serif;
+    overflow: auto;
+}
+
+#troisiemeMessage::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+#troisiemeMessage::-webkit-scrollbar-track {
+    background: #ffffff;   /* Couleur de fond de la piste */
+    border-radius: 12px;    /* Coins arrondis */
+    border: 1px solid #ccc; /* Bordure autour de la piste */
+}
+
+#troisiemeMessage::-webkit-scrollbar-thumb {
+    background: #b4b1b1;        /* Couleur de la poignée */
+    border-radius: 10px;     /* Coins arrondis */
+    border: 3px solid #555;  /* Bordure autour de la poignée */
+    box-shadow: 0 0 1px #f3f1f14d; /*Ombre autour de la poignée*/
+    opacity: 0.7;            /* Opacité de la poignée */
 }
 
 #premierMessage {
@@ -145,14 +166,17 @@
     background-color: white;
     width: 300px;
     height: 450px;
-    margin-right: 550px;
+    margin-right: 450px;
+    /* margin-right: 550px; */
     padding: 20px;
     border-radius: 15px;
     font-size: 20px;
     font-family: "Gill Sans", sans-serif;
 }
 
-
+/* #resultatsObtenus {
+    
+} */
 
 /* #deuxiemeMessage {
     opacity: 40%;
@@ -171,13 +195,20 @@
 } */
 
 /* div qui enveloppe les 2 blocs */
-#divSupp {
+/* #divSupp {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+} */
+
+#divQuiEnveloppeTout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    
 }
-
-
 
 
 /* page CART */
