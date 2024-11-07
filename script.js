@@ -192,7 +192,9 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
         })
         .then(response => response.json()) //On passe la reponse obtenue de l'api en format JSON
         .then(data => { 
-            console.log(data); // Les trajets sont bien trouvés et affichés dans la console
+            for(let e in data.allTrains) {
+                console.log(data.allTrains[e].date); // Les trajets sont bien trouvés et affichés dans la console
+            }
             if(data.departure && data.arrival && data.date) {
                 troisiemeMessage.innerHTML += `
                     <p>Départ : ${trip.departure}</p>
