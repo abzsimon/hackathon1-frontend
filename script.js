@@ -117,7 +117,8 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
                         tripID: tripID, 
                     })
                 })
-                .then(response => response.json()) 
+                .then(response => response.json())
+                .then(data => console.log(data)) 
             });
         });
     });
