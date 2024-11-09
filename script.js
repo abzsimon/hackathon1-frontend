@@ -194,11 +194,11 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
                 .then(response => response.json()) 
                 .then(data => {
                     console.log(data.data[1])
-                    document.querySelector("#cartContainer").innerHTML += `
+                    document.querySelector("#container").innerHTML += `
                         <div id="cart">
                             <p>${data.data}</p>
                         </div>`;
-                    // document.querySelector("#cart").style.zIndex = "1";
+                    document.querySelector("#cart").style.zIndex = "1";
                     window.location.assign('cart.html');
 
                 });
