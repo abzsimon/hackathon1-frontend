@@ -84,13 +84,14 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
         .then(response => response.json()) //On passe la reponse obtenue de l'api en format JSON
         .then(data => { 
             for(let e in data.allTrains) {
-                console.log(data.allTrains[e].date); // Les trajets sont bien trouvés et affichés dans la console
+                console.log(data.allTrains[e].price); // Les trajets sont bien trouvés et affichés dans la console
                 if(data.allTrains[e].departure && data.allTrains[e].arrival && data.allTrains[e].date) {
                     troisiemeMessage.innerHTML += `
                         <div id="resultatsObtenus">
-                            <p>Départ : ${data.allTrains[e].departure}</p>
-                            <p>Arrivée : ${data.allTrains[e].arrival}</p>
-                            <p>Date : ${new Date(data.allTrains[e].date)}</p>
+                            <p>${data.allTrains[e].departure} > ${data.allTrains[e].arrival}</p>
+                            <p>${data.allTrains[e].date.slice(0,10)}</p>
+                            <p>${data.allTrains[e].price}</p>
+                            <p>Book</p>
                         </div>
                         `;
                         tripTrouve = true;
