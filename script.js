@@ -118,14 +118,6 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
                     })
                 })
                 .then(response => response.json()) 
-                .then(data => {
-                    console.log(data.data[1])
-                    document.querySelector("#container").innerHTML += `
-                        <div id="cart">
-                            <p>${JSON.stringify(data.data[1], null, 2)}</p>
-                        </div>`;
-                    document.querySelector("#container").style.zIndex = "1";
-                });
             });
         });
     });
