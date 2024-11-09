@@ -91,7 +91,7 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
                             <p>${data.allTrains[e].departure} > ${data.allTrains[e].arrival}</p>
                             <p>${data.allTrains[e].date.slice(0,10)}</p>
                             <p>${data.allTrains[e].price}</p>
-                            <p>Book</p>
+                            <p id ="book">Book</p>
                         </div>
                         `;
                         tripTrouve = true;
