@@ -191,17 +191,8 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
                         tripID: tripID, 
                     })
                 })
-                .then(response => response.json()) 
-                .then(data => {
-                    console.log(data.data[1])
-                    document.querySelector("#container").innerHTML += `
-                        <div id="cart">
-                            <p>${data.data}</p>
-                        </div>`;
-                    document.querySelector("#cart").style.zIndex = "1";
-                    window.location.assign('cart.html');
-
-                });
+                .then(response => response.json())
+                .then(data => console.log(data)) 
             });
         });
     });
