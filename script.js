@@ -108,7 +108,7 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
             };                  
         })
         .then (() => {
-            document.querySelector(".book").addEventListener("click", function () {
+            troisiemeMessage.addEventListener("click", function () {
                 let tripID = event.target.getAttribute("data-trip-id");
                 fetch("https://hackathon1-backend.vercel.app/cart", { 
                     method: "POST",
@@ -118,7 +118,14 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
                     })
                 })
                 .then(response => response.json()) 
-                .then(data => console.log(data))
+                .then(data => {
+                    console.log(data.data[1])
+                    document.querySelector("#container").innerHTML += `
+                        <div id="cart">
+                            <p>${JSON.stringify(data.data[1], null, 2)}</p>
+                        </div>`;
+                    document.querySelector("#container").style.zIndex = "1";
+                });
             });
         });
     });
