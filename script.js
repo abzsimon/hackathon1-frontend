@@ -89,7 +89,7 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
                     troisiemeMessage.innerHTML += `
                         <div id="resultatsObtenus">
                             <p>${data.allTrains[e].departure} > ${data.allTrains[e].arrival}</p>
-                            <p>${data.allTrains[e].date.slice(0,10)}</p>
+                            <p>${data.allTrains[e].date.slice(11,-8)}</p>
                             <p>${data.allTrains[e].price}</p>
                             <p id ="book">Book</p>
                         </div>

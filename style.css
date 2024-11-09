@@ -131,14 +131,13 @@
 #deuxiemeMessage, #troisiemeMessage {
     display: none;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: baseline;
     background-color: white;
     width: 400px;
     height: 450px;
     margin-right: 450px;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 6px;
     font-size: 20px;
     font-family: cursive;
     overflow: auto;
@@ -184,17 +183,17 @@
     max-width: 105%;
     margin-bottom: 1em;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     background-color: #f5eeee;
-    border-radius: 12px;
+    border-radius: 6px;
     font-size:0.7em;
     /* box-sizing: border-box; */
     font-family: cursive;
 }
 
 #book {
-    border-radius:0.5em;
+    border-radius:6px;
     background-color: rgb(107, 209, 170);
     color: white;
     height: 70%;
