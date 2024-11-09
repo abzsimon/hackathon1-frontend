@@ -91,7 +91,7 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
                             <p>${data.allTrains[e].departure} > ${data.allTrains[e].arrival}</p>
                             <p>${data.allTrains[e].date.slice(11,-8)}</p>
                             <p>${data.allTrains[e].price}</p>
-                            <p id ="book">Book</p>
+                            <p class="book">Book</p>
                         </div>
                         `;
                         tripTrouve = true;
@@ -106,5 +106,21 @@ document.querySelector("#bookingsButton").addEventListener("click", function () 
                 deuxiemeMessage.style.display = "flex";
                 troisiemeMessage.style.display ="none"
             };                  
+        })
+        .then (() => {
+            document.querySelector(".book").addEventListener("click", function () {
+                fetch("https://hackathon1-backend.vercel.app/cart", { 
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        tripID: '672921b62b09f5cbeca88030', 
+                    })
+                })
+                .then(response => response.json()) 
+                .then(data => console.log(data))
+            });
         });
     });
+
+
+

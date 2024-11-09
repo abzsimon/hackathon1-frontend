@@ -192,7 +192,7 @@
     font-family: cursive;
 }
 
-#book {
+.book {
     border-radius:6px;
     background-color: rgb(107, 209, 170);
     color: white;
